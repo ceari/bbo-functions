@@ -29,6 +29,10 @@ int main(int argc, char** argv) {
     }
     char* instance = argv[1];
     int seed = atoi(argv[2]);
+
+    FILE* fd = fopen(instance, "r");
+    double instance_val = 1.0;
+    fscanf(fd, "%lf", &instance_val);
     
     rng = gsl_rng_alloc(gsl_rng_mt19937);
     gsl_rng_set(rng, seed);
@@ -51,7 +55,7 @@ int main(int argc, char** argv) {
         f_rosenbrock += 100 * (z[i-1]*z[i-1] - z[i]) * (z[i-1]*z[i-1] - z[i]) + (z[i-1] - 1) * (z[i-1] - 1);
     }
     
-    double f_110 = fGN(f_rosenbrock, 1) + f_pen(x, D) + f_opt;
+    double f_110 = fGN(f_rosenbrock, 1) + f_pen(x, D) + f_opt + instance_val;
     
     printf("%f\n", f_110);
     
