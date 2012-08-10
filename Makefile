@@ -1,11 +1,7 @@
-all: rosenbrock cost_rosenbrock
+all: bbfunc
 
 clean:
-	rm -f rosenbrock cost_rosenbrock
+	rm -f bbfunc
 
-rosenbrock: rosenbrock.c
-	gcc rosenbrock.c -std=c99 /usr/lib/libgsl.a /usr/lib/libgslcblas.a -lm -O2 -o rosenbrock
-
-cost_rosenbrock: cost_rosenbrock.c
-	gcc -static -std=c99 -O2 -o cost_rosenbrock cost_rosenbrock.c
-
+bbfunc: bbfunc.c
+	gcc benchmarkshelper.c benchmarksdeclare.c benchmarksnoisy.c bbfunc.c -std=c99 -lm -O2 -g -o bbfunc
