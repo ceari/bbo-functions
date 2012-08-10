@@ -1,5 +1,5 @@
-Noisy rosenbrock function
-=========================
+Noisy BBO function implementations
+==================================
 
-This is an implementation of the noisy Rosenbrock function f_110, as defined in
+These are implementations of noisy black box optimization functions, as defined e.g. in
 http://coco.lri.fr/BBOB-downloads/download11.05/bbobdocnoisyfunctions.pdf
