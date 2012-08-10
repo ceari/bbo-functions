@@ -1,0 +1,5 @@
+Noisy rosenbrock function
+=========================
+
+This is an implementation of the noisy Rosenbrock function f_110, as defined in
+http://coco.lri.fr/BBOB-downloads/download11.05/bbobdocnoisyfunctions.pdf
