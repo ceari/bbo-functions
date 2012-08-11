@@ -489,28 +489,24 @@ TwoDoubles f110(double* x) {
         isInitDone = 1;
     }
     Fadd = Fopt;
-    printf("%f %d\n", Fadd, DIM);
-    
-    printf("%f %f\n", x[0], x[1]);
+
     /* BOUNDARY HANDLING*/
     for (i = 0; i < DIM; i++) 
     {
         tmp = fabs(x[i]) - 5.;
-        printf("%f\n", tmp);
+
         if (tmp > 0.)
         {
             Fpen += tmp * tmp;
         }
     }
     Fadd += 100. * Fpen;
-    printf("%f\n", Fadd);
+
 
     /* TRANSFORMATION IN SEARCH SPACE*/
     for (i = 0; i < DIM; i++) {
         tmx[i] = scales * (x[i] - 0.75 * Xopt[i]) + 1;
     }
-    printf("%f %f\n", tmx[0], tmx[1]);
-    
     /* COMPUTATION core*/
     for (i = 0; i < DIM - 1; i++)
     {
