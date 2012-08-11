@@ -1,5 +1,11 @@
 Noisy BBO function implementations
 ==================================
 
-These are implementations of noisy black box optimization functions, as defined e.g. in
+Implementations of noisy black box optimization functions, as defined e.g. in
 http://coco.lri.fr/BBOB-downloads/download11.05/bbobdocnoisyfunctions.pdf
+
+Compilation:
+> make
+
+Usage:
+./bbfunc
