@@ -41,7 +41,7 @@ extern void initbenchmarksnoisy(void);
 
 int main(int argc, char** argv) {
     if (argc < 5) {
-        printf("Usage: bbfunc <instance> <function_name> <dimensions D> <seed> <xopt_1> ... <xopt_D> <x_1> ... <x_D>\n");
+        printf("Usage: bbfunc <instance> <seed> <function_name> <dimensions D> <xopt_1> ... <xopt_D> <x_1> ... <x_D>\n");
         return 0;
     }
     char* instance = argv[1];
@@ -52,7 +52,7 @@ int main(int argc, char** argv) {
     setNoiseSeed(seed, seed);
     
     if (argc < 5 + 2*DIM) {
-        printf("Usage: bbfunc <instance> <function_name> <dimensions D> <seed> <xopt_1> ... <xopt_D> <x_1> ... <x_D>\n");
+        printf("Usage: bbfunc <instance> <seed> <function_name> <dimensions D> <xopt_1> ... <xopt_D> <x_1> ... <x_D>\n");
         return 0;
     }
     

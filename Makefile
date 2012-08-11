@@ -1,4 +1,4 @@
-all: bbfunc bbcost
+all: bbfunc bbcost ok
 
 clean:
 	rm -f bbfunc bbcost
@@ -8,3 +8,6 @@ bbfunc: bbfunc.c
 
 bbcost: bbcost.c
 	gcc bbcost.c -std=c99 -O2 -g -static -o bbcost
+
+ok: ok.c
+	gcc ok.c -O2 -g -static -o ok
