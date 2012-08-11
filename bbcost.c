@@ -6,6 +6,9 @@ int main(int argc, char** argv) {
     FILE* fd = fopen(result_file, "r");
     double d;
     fscanf(fd, "%lf", &d);
+    fgetc(fd);
+    fscanf(fd, "%lf", &d);
+    fscanf(fd, "%lf", &d);
     printf("%f\n", d);
     return 0;
 }
