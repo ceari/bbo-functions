@@ -45,11 +45,11 @@ int main(int argc, char** argv) {
         return 0;
     }
     char* instance = argv[1];
-    int seed = atoi(argv[2]);
+    long long seed = atoll(argv[2]) % 10000000;
     char* func_name = argv[3];
     DIM = atoi(argv[4]);
     
-    setNoiseSeed(seed, seed);
+    setNoiseSeed(seed, 2*seed);
     
     if (argc < 5 + 2*DIM) {
         printf("Usage: bbfunc <instance> <seed> <function_name> <dimensions D> <xopt_1> ... <xopt_D> <x_1> ... <x_D>\n");
