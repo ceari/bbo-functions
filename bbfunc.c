@@ -129,7 +129,14 @@ int main(int argc, char** argv) {
         printf("Unrecognized function\n");
         return 0;
     }
-    
+    /*for (double x1 = -5; x1 <= 5; x1 += 0.01) {
+        for (double x2 = -5; x2 <= 5; x2 += 0.01) {
+            x[0] = x1;
+            x[1] = x2;
+            res = f110(x);
+            printf("%f %f %f\n", x1, x2, res.Ftrue);
+        }
+    }*/
     printf("%f\n", res.Fval);
     
     return 0;
