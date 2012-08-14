@@ -502,10 +502,9 @@ TwoDoubles f110(double* x) {
     }
     Fadd += 100. * Fpen;
 
-
     /* TRANSFORMATION IN SEARCH SPACE*/
     for (i = 0; i < DIM; i++) {
-        tmx[i] = scales * (x[i] - 0.75 * Xopt[i]) + 1;
+        tmx[i] = scales * (x[i] - Xopt[i]) + 1;
     }
     /* COMPUTATION core*/
     for (i = 0; i < DIM - 1; i++)
@@ -562,7 +561,7 @@ TwoDoubles f111(double* x) {
 
     /* TRANSFORMATION IN SEARCH SPACE*/
     for (i = 0; i < DIM; i++) {
-        tmx[i] = scales * (x[i] - 0.75 * Xopt[i]) + 1;
+        tmx[i] = scales * (x[i] - Xopt[i]) + 1;
     }
 
     /* COMPUTATION core*/
@@ -619,7 +618,7 @@ TwoDoubles f112(double* x) {
 
     /* TRANSFORMATION IN SEARCH SPACE*/
     for (i = 0; i < DIM; i++) {
-        tmx[i] = scales * (x[i] - 0.75 * Xopt[i]) + 1;
+        tmx[i] = scales * (x[i] - Xopt[i]) + 1;
     }
 
     /* COMPUTATION core*/
