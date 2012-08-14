@@ -137,7 +137,7 @@ int main(int argc, char** argv) {
             printf("%f %f %f\n", x1, x2, res.Ftrue);
         }
     }*/
-    printf("%f %f\n", res.Fval);
+    printf("%f\n", res.Fval);
     
     return 0;
 }
