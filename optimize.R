@@ -8,7 +8,7 @@ f = function(x) {
     return (as.double(strsplit(val, c(" "))[[1]][[1]]))
 }
 
-est.ras = DEoptim(f, lower=c(-5,-5,-5,-5,-5), upper=c(5,5,5,5,5), control=list(storepopfrom=1, itermax=1000, trace=F))
+est.ras = DEoptim(f, lower=c(-5,-5,-5,-5,-5), upper=c(5,5,5,5,5), control=list(storepopfrom=1, itermax=10, trace=F))
 
 
-cat (est.ras$optim)
+print (est.ras$optim)
