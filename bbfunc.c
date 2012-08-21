@@ -45,7 +45,7 @@ int main(int argc, char** argv) {
         return 0;
     }
     char* instance = argv[1];
-    long long seed = atoll(argv[2]) % 10000000;
+    long long seed = atoll(argv[2]) % 999983;
     char* func_name = argv[3];
     DIM = atoi(argv[4]);
     
@@ -137,7 +137,7 @@ int main(int argc, char** argv) {
             printf("%f %f %f\n", x1, x2, res.Ftrue);
         }
     }*/
-    printf("%f\n", res.Fval);
+    printf("%f %f\n", res.Fval, res.Ftrue);
     
     return 0;
 }
